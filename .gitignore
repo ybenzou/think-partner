@@ -1,0 +1,68 @@
+# === Generic Ignores ===
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs and databases
+*.log
+*.sqlite
+*.db
+*.db-* # Common for temporary DB files
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE specific files
+.vscode/          # VS Code settings (optional, sometimes you might want to share launch.json)
+.idea/            # JetBrains IDEs (IntelliJ, PyCharm, WebStorm)
+*.iml             # JetBrains project files
+*.swp             # Vim swap files
+*.swo             # Vim swap files
+*~                # Emacs backup files
+.#* # Emacs lock files
+
+# === Python / Backend ===
+# Virtual environment directories
+venv/
+.venv/
+/backend/venv/    # Explicitly ignore venv in backend folder if it's created there
+/backend/.venv/   # Explicitly ignore .venv in backend folder if it's created there
+
+# Specific cache directories
+*.mypy_cache/
+.pytest_cache/
+
+# Coverage reports
+.coverage
+htmlcov/
+coverage/         # General coverage folder
+
+# Environment variables
+# Crucial: Do NOT commit files containing secrets or local configurations!
+/backend/.env     # Ignore the .env file specifically in the backend directory
+
+# === Node.js / Frontend ===
+# Dependency directory
+/frontend/node_modules/ # Ignore node_modules specifically in the frontend directory
+
+# Build output directory (Vite default is 'dist')
+/frontend/dist/
+
+# Vite cache/temp directory
+/frontend/.vite/ # This will ignore the whole .vite folder including deps
+
+# Lock files (package-lock.json is usually committed, but listed in your structure)
+# If you genuinely don't want to commit package-lock.json, uncomment the next line
+# /frontend/package-lock.json
+
+# === Other Potential Ignores ===
+# Debugging and profiling
+*.pdb
+*.ipynb_checkpoints # Jupyter notebooks checkpoints
+
+# Example for Docker build context if needed
+# Dockerfile.bak
+# .dockerignore
